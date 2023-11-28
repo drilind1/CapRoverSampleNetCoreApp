@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "KH9Qgy2X7Gzk7iGUO2wgJQigBw/eva3ROgld9zEpdee030+aiptbv6qWgJLomzlseDvDMm9ELFDvBDmNRz9UxA==",
+  "dgSpecHash": "6yM61+UtboJCdRY43ShTB456V3bqYHNvmXeGiBm87g/YcWlpYRArc7lsy4KDY0lAqTp1cMNLycee+1fnHeiO9w==",
   "success": true,
   "projectFilePath": "C:\\Users\\Driborn\\RiderProjects\\Domesday\\Domesday\\Domesday.csproj",
   "expectedPackageFiles": [
@@ -37,6 +37,8 @@
     "C:\\Users\\Driborn\\.nuget\\packages\\microsoft.extensions.options\\8.0.0\\microsoft.extensions.options.8.0.0.nupkg.sha512",
     "C:\\Users\\Driborn\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
     "C:\\Users\\Driborn\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\Driborn\\.nuget\\packages\\npgsql\\8.0.0\\npgsql.8.0.0.nupkg.sha512",
+    "C:\\Users\\Driborn\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\8.0.0\\npgsql.entityframeworkcore.postgresql.8.0.0.nupkg.sha512",
     "C:\\Users\\Driborn\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.6\\sqlitepclraw.bundle_e_sqlite3.2.1.6.nupkg.sha512",
     "C:\\Users\\Driborn\\.nuget\\packages\\sqlitepclraw.core\\2.1.6\\sqlitepclraw.core.2.1.6.nupkg.sha512",
     "C:\\Users\\Driborn\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.6\\sqlitepclraw.lib.e_sqlite3.2.1.6.nupkg.sha512",

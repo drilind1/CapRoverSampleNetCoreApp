@@ -53,7 +53,7 @@ else
     app.UseHsts();
 }
 
-Console.WriteLine("Connection String " + connectionString + " ENV: " + app.Environment);
+Console.WriteLine("Connection String " + connectionString + " ENV: " + app.Environment.EnvironmentName);
 
 app.UseHttpsRedirection();
 

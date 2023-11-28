@@ -4,7 +4,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domesday", "Domesday\Domesd
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{06AE7092-2119-4282-AE83-E2B35764EA71}"
 	ProjectSection(SolutionItems) = preProject
-		captain-definition.json = captain-definition.json
+		captain-definition = captain-definition
 	EndProjectSection
 EndProject
 Global

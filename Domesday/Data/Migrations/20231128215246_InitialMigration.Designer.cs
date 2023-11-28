@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Domesday.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20231128212401_datakey added")]
-    partial class datakeyadded
+    [Migration("20231128215246_InitialMigration")]
+    partial class InitialMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

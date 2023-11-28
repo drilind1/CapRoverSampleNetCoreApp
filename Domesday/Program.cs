@@ -29,6 +29,7 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseNpgsql(connectionString));
+
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddIdentityCore<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
@@ -64,15 +65,6 @@ app.MapRazorComponents<App>()
 // Add additional endpoints required by the Identity /Account Razor components.
 app.MapAdditionalIdentityEndpoints();
 
-await RunMigrations();
+app.RunMigrations();
 
 app.Run();
-return;
-
-async Task RunMigrations()
-{
-    await using var scope = app.Services.CreateAsyncScope();
-    await using var db = scope.ServiceProvider.GetService<ApplicationDbContext>();
-
-    await db?.Database.MigrateAsync()!;
-}

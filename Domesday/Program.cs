@@ -26,6 +26,7 @@ builder.Services.AddAuthentication(options =>
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ??
                        throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 
+builder.Configuration.AddEnvironmentVariables();
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseNpgsql(connectionString));
@@ -67,6 +68,7 @@ app.MapAdditionalIdentityEndpoints();
 
 await using var scope = app.Services.CreateAsyncScope();
 await using var db = scope.ServiceProvider.GetService<ApplicationDbContext>();
+
 await db.Database.MigrateAsync();
 
 app.Run();

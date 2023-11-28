@@ -26,8 +26,6 @@ builder.Services.AddAuthentication(options =>
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ??
                        throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 
-builder.Configuration.AddEnvironmentVariables();
-
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseNpgsql(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
@@ -53,8 +51,6 @@ else
     app.UseHsts();
 }
 
-Console.WriteLine("Connection String " + connectionString + " ENV: " + app.Environment.EnvironmentName);
-
 app.UseHttpsRedirection();
 
 app.UseStaticFiles();
@@ -66,9 +62,15 @@ app.MapRazorComponents<App>()
 // Add additional endpoints required by the Identity /Account Razor components.
 app.MapAdditionalIdentityEndpoints();
 
-await using var scope = app.Services.CreateAsyncScope();
-await using var db = scope.ServiceProvider.GetService<ApplicationDbContext>();
-
-await db.Database.MigrateAsync();
+await RunMigrations();
 
 app.Run();
+return;
+
+async Task RunMigrations()
+{
+    await using var scope = app.Services.CreateAsyncScope();
+    await using var db = scope.ServiceProvider.GetService<ApplicationDbContext>();
+
+    await db?.Database.MigrateAsync()!;
+}

@@ -13,7 +13,7 @@ namespace SampleNetCoreApp.Data.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             // Delete the tabels if they exist for a clean 'Initial Migration'
-            Down(migrationBuilder);
+            // Down(migrationBuilder);
             
             migrationBuilder.CreateTable(
                 name: "AspNetRoles",
